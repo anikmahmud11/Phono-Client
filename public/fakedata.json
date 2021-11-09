@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/Hr8XdJs/p1.png",
+        "name": "AFFINITY M20",
+        "price": 200.00,
+        "rating": 4
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/2KzYjdS/p2.png",
+        "name": "AFFINITY P40 PRO",
+        "price": 300.00,
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/HrbJsYS/p3.png",
+        "name": "AFFINITY R18 PRO",
+        "price": 100.00,
+        "rating": 2
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/NTbDNvP/p4.png",
+        "name": "PO V40 THINQ",
+        "price": 701.00,
+        "rating": 5
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/p1gbRSj/Capture5.png",
+        "name": "SPECTRONIC XR",
+        "price": 101.00,
+        "rating": 3
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/thc6RqW/p6.png",
+        "name": "SPOTS 8 LITE",
+        "price": 301.00,
+        "rating": 4
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/9Nx3QjN/p7.png",
+        "name": "SPOTS ERA 5X",
+        "price": 701.00,
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/FxzG16s/p8.png",
+        "name": "SPOTS Y93 1815",
+        "price": 501.00,
+        "rating": 4
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co/KxhHMTd/p9.png",
+        "name": "TENCHO 10 LITE",
+        "price": 201.00,
+        "rating": 3
+    },
+    {
+        "id": 10,
+        "img": "https://i.ibb.co/Wpp2cff/p10.png",
+        "name": "TENCHO 8.1",
+        "price": 101.00,
+        "rating": 2
+    }
+]
