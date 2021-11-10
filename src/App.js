@@ -18,8 +18,10 @@ import AuthProvider from './context/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Pay from './Pages/DashBoard/Pay/Pay';
 import MyOrders from './Pages/DashBoard/MyOrders/MyOrders';
-import Review from './Pages/Home/Review/Review';
+
 import Reviews from './Pages/DashBoard/Review/Reviews';
+import ManageOrders from './Pages/DashBoard/ManageOrders/ManageOrders';
+import MakeAdmin from './Pages/DashBoard/MakeAdmin/MakeAdmin';
 
 function App() {
   return (
@@ -54,6 +56,12 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/review">
            <Reviews/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/manageorders">
+           <ManageOrders/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/makeadmin">
+           <MakeAdmin/>
           </PrivateRoute>
           <Route exact path="*">
             <NotFounds />

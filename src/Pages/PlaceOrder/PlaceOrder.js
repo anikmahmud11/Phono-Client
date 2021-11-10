@@ -53,7 +53,7 @@ console.log(result);
           <h4 className="text-success">{singleService?.name}</h4>
           <form className="placeOrder-form container  m-0 border border-success rounded  " onSubmit={handleSubmit(onSubmit)}>
 
-        <input className="container-fluid"defaultValue={user?.email}  {...register("email", { required: true })} required   />
+        <input readOnly className="container-fluid" defaultValue={user?.email}  {...register("email", )}    />
         {errors.email && <span className="error">This field is required</span>}
         <input className="container-fluid" placeholder="Address" defaultValue="" {...register("address")} required/>
         <input className="container-fluid" placeholder="City" defaultValue="" {...register("city")} required/>

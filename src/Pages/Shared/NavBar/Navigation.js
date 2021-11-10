@@ -41,9 +41,9 @@ const Navigation = () => {
               <Nav.Link className="text-dark" as={Link} to="/pay">Pay</Nav.Link>
               <Nav.Link className="text-dark" as={Link} to="/myorders">My Orders</Nav.Link>
               <Nav.Link className="text-dark" as={Link} to="/review">Review</Nav.Link>
-              <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+              <NavDropdown title="Admin" id="offcanvasNavbarDropdown">
+                <NavDropdown.Item as={Link} to="/manageorders">Manage All Orders</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/makeadmin">Make Admin</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
                   Something else here
@@ -67,33 +67,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-
-
-
-{/* <Navbar collapseOnSelect expand="lg" bg="light" variant="dark" sticky="top" >
-  <Container >
-  <Navbar.Brand  href="#home"><img className="w-75 img-fluid" src="https://i.ibb.co/9qDGzMf/Capture.png" alt="" /></Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link className="text-dark" as={Link} to="/home">Home</Nav.Link>
-      <Nav.Link className="text-dark" as={Link} to="/exploreMore">Explore More</Nav.Link>
-     
-    </Nav>
-    <Nav>
-    {
-          user?.email ?
-            <Button onClick={logout}>Logout</Button>
-            :
-            <Nav.Link as={Link} to="/login">
-              <Button>Login</Button>
-            </Nav.Link>
-        }
-      <Navbar.Text className="text-dark">
-        Login As : {user.email}
-      </Navbar.Text>
-    </Nav>
-  </Navbar.Collapse>
-  </Container>
-</Navbar> */}
