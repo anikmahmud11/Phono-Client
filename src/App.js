@@ -8,21 +8,60 @@ import Home from './Pages/Home/Home/Home';
 import Navigation from './Pages/Shared/NavBar/Navigation';
 import Footer from './Pages/Shared/Footer/Footer';
 import MoreProduct from './Pages/Home/MoreProducts/MoreProduct';
+
+import NotFounds from './Pages/404/NotFounds';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Registration/Register';
+import AuthProvider from './context/AuthProvider/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Pay from './Pages/DashBoard/Pay/Pay';
+import MyOrders from './Pages/DashBoard/MyOrders/MyOrders';
+import Review from './Pages/Home/Review/Review';
+import Reviews from './Pages/DashBoard/Review/Reviews';
+
 function App() {
   return (
 
-    <Router>
-      <Navigation/>
-      <Switch>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/exploreMore">
-          <MoreProduct/>
-        </Route>
-      </Switch>
-      <Footer/>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/register">
+            <Register />
+          </Route>
+          <Route exact path="/exploreMore">
+            <MoreProduct />
+          </Route>
+          <PrivateRoute exact path="/placeorder/:serviceId">
+            <PlaceOrder />
+          </PrivateRoute>
+          <PrivateRoute exact path="/pay">
+           <Pay/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/myorders">
+          <MyOrders></MyOrders>
+          </PrivateRoute>
+          <PrivateRoute exact path="/review">
+           <Reviews/>
+          </PrivateRoute>
+          <Route exact path="*">
+            <NotFounds />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </AuthProvider>
 
   );
 }
