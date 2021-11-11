@@ -5,14 +5,14 @@ import Rating from 'react-rating';
 const Review = () => {
     const [userReviews, setUserReviews] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://mysterious-sierra-88051.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setUserReviews(data))
     }, [])
     return (
         <div className="container">
-            <h1 className="text-center p-3">Reviews</h1>
-            <div className=" text-center m-auto container row w-50">
+            <h1 className="text-center p-3 text-danger">Reviews</h1>
+            <div className=" text-center m-auto  row w-auto">
                 {
                     userReviews.map(userReview => <div
                         key={userReview.name}

@@ -21,13 +21,14 @@ const Register = () => {
 
 
 
-    const handleLoginSubmit = e=>{
+    const handleLoginSubmit = e =>{
         if(loginData.password !== loginData.passwordMatch){
             alert('password did not match ')
             return
         }
-        registerUser(loginData.email, loginData.password)
+        registerUser(loginData.email, loginData.password,loginData.name)
         e.preventDefault();
+        
     }
     return (
         <Container className="border w-75">
@@ -35,6 +36,13 @@ const Register = () => {
         <Typography className="text-center" variant="body1" gutterBottom>Registration</Typography>
         {
          !isLoading &&<form onSubmit={handleLoginSubmit}>
+            <TextField
+                sx={{ width: '75%', m: 1 }}
+                id="standard-basic"
+                label="Your Name"
+                name="name"
+                onChange={handleOnChange}
+                variant="standard" />
             <TextField
                 sx={{ width: '75%', m: 1 }}
                 id="standard-basic"

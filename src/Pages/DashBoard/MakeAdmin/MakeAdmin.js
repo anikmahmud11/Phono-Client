@@ -1,15 +1,35 @@
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Alert } from '@mui/material';
 import React, { useState } from 'react';
-import { Alert } from 'react-bootstrap';
+
 
 const MakeAdmin = () => {
     const [email,setEmail]=useState('');
+    const[success, setSuccess]=useState(false)
 
     const handleOnBlur= e=>{
         setEmail(e.target.value)
     }
 
     const handleAdminSubmit = e => {
+        const user = {email};
+        fetch('https://mysterious-sierra-88051.herokuapp.com/users/admin',{
+            method:'PUT',
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body:JSON.stringify(user)
+            
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            if(data.modifiedCount){
+                console.log(data)
+                setSuccess(true)
+            }
+            console.log(data);
+        })
+
+
         e.preventDefault()
     }
 
@@ -28,7 +48,7 @@ const MakeAdmin = () => {
                     variant="standard" />
                 <Button type="submit" variant="contained">Make Admin</Button>
             </form>
-            {/* {success && <Alert severity="success">Made Admin successfully!</Alert>} */}
+            {success && <Alert severity="success">Made Admin successfully!</Alert>}
         </div>
     );
 };

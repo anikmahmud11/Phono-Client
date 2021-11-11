@@ -8,17 +8,18 @@ const MyOrders = () => {
     const {user}=useAuth();
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://mysterious-sierra-88051.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
-                const emails = data.filter(data=>data.email==user.email)
+                const emails = data.filter(data=>data.email === user.email)
                setOrders(emails);
             });
-    }, [])
+    }, [user.email])
+// console.log(orders);
 
-    // delete user
+    // delete 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://mysterious-sierra-88051.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -27,7 +28,9 @@ const MyOrders = () => {
                 if (data.deletedCount > 0) {
                     alert('deleted successfully')
                     const remainingOrders = orders.filter(order => order._id !== id);
+                   
                     setOrders(remainingOrders)
+                   
                 }
             })
 
@@ -49,9 +52,9 @@ const MyOrders = () => {
                                 <div className="card">
                                     <div className="card-body ">
                                         <h5 className="card-title text-center">Order Information</h5>
-                                        <img className="w-50" src={order.orders.img} alt="" />
-                                        <p className="text-start">Product-Name: {order.orders.name} </p>
-                                        <p className="text-start">Order-Price: {order.orders.price} </p>
+                                        <img className="w-50" src={order?.orders?.img} alt="" />
+                                        <p className="text-start">Product-Name: {order?.orders?.name} </p>
+                                        <p className="text-start">Order-Price: {order?.orders?.price} </p>
                                         <p className="text-start">Email: {order.email}  </p>
                                         <p className="text-start">Shipping-Address:{order.address}   </p>
                                         <p className="text-start">phone: {order.phone}  </p>

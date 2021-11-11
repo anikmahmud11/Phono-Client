@@ -10,8 +10,8 @@ const Footer = () => {
     const home = <FontAwesomeIcon icon={faHome} />
 
     return (
-        <div>
-            <div className="container">
+        <div className="pt-5">
+            <div className="container border">
                 <div className="row">
                     <div className="col">
                         <div className="col">
@@ -127,10 +127,10 @@ const Footer = () => {
                 </div>
                 <div className="row text-center mt-2">
                 
-                 <p>XXXXXX.com is now one of the leading e-commerce organizations in Bangladesh. It is indeed the biggest online bookshop or bookstore in Bangladesh that helps you save time and money. You can buy books online with a few clicks or a convenient phone call. With breathtaking discounts and offers you can buy anything from Bangla Upannash or English story books to academic, research or competitive exam books. Superfast cash on delivery service brings the products at your doorstep. Our customer support, return and replacement policies will surely add extra confidence in your online shopping experience. Happy Shopping with XXXXXX.com!</p>
+                 <p>Phono.com is now one of the leading e-commerce organizations in Bangladesh. It is indeed the biggest online mobile shop in Bangladesh that helps you save time and money. You can buy mobiles online with a few clicks or a convenient phone call. With breathtaking discounts and offers you can buy anything from . Superfast cash on delivery service brings the products at your doorstep. Our customer support, return and replacement policies will surely add extra confidence in your online shopping experience. Happy Shopping with Phono.com!</p>
                 </div>
                 <div className=" container text-center">
-                 © 2012-2021 XXXXXX.com
+                 © 2012-2021 Phono.com
                  </div>
             </div>
 

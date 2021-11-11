@@ -9,7 +9,7 @@ const Reviews = (props) => {
    const [singleService, setSingleService] = useState({})
  const{user}=useAuth();
    useEffect(()=>{
-    fetch('http://localhost:5000/products')
+    fetch('https://mysterious-sierra-88051.herokuapp.com/products')
     .then(res=>res.json())
     .then(data=>setServiceDetails(data))
    },[])
@@ -23,7 +23,7 @@ const Reviews = (props) => {
    const onSubmit = data => {
     const service = singleService;
     data.orders= service;
-       fetch('http://localhost:5000/reviews',{
+       fetch('https://mysterious-sierra-88051.herokuapp.com/reviews',{
         method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -48,7 +48,7 @@ console.log(result);
         <div className="mb-2 container">
           <form className="placeOrder-form container  m-0  border-success rounded  " onSubmit={handleSubmit(onSubmit)}>
 
-        <input readOnly className="container-fluid" defaultValue={user?.email}  {...register("email", )}    />
+        <input readOnly className="container-fluid" defaultValue={user?.email && user?.displayName}  {...register("email", )}    />
         {errors.email && <span className="error">This field is required</span>}
         <input className="container-fluid" placeholder="Rate between(1 to 5)" defaultValue="" {...register("rating")} required/>
         <input className="container-fluid" placeholder="Description" defaultValue="" {...register("description")} required/>

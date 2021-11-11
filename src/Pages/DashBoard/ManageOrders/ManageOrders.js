@@ -7,14 +7,14 @@ import { Link, NavLink } from 'react-router-dom';
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://mysterious-sierra-88051.herokuapp.com/orders')
             .then(res => res.json())
             .then(data =>setOrders(data));
     }, [])
 
-    // delete user
+    // delete 
     const handleDeleteOrder = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://mysterious-sierra-88051.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -45,9 +45,9 @@ const ManageOrders = () => {
                             <div className="card">
                                 <div className="card-body ">
                                     <h5 className="card-title text-center">Order Information</h5>
-                                    <img className="w-50" src={order.orders.img} alt="" />
-                                    <p className="text-start">Product-Name: {order.orders.name} </p>
-                                    <p className="text-start">Order-Price: {order.orders.price} </p>
+                                    <img className="w-50" src={order?.orders?.img} alt="" />
+                                    <p className="text-start">Product-Name: {order?.orders?.name} </p>
+                                    <p className="text-start">Order-Price: {order?.orders?.price} </p>
                                     <p className="text-start">Email: {order.email}  </p>
                                     <p className="text-start">Shipping-Address:{order.address}   </p>
                                     <p className="text-start">phone: {order.phone}  </p>

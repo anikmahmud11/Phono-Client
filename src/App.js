@@ -22,6 +22,8 @@ import MyOrders from './Pages/DashBoard/MyOrders/MyOrders';
 import Reviews from './Pages/DashBoard/Review/Reviews';
 import ManageOrders from './Pages/DashBoard/ManageOrders/ManageOrders';
 import MakeAdmin from './Pages/DashBoard/MakeAdmin/MakeAdmin';
+import AddProducts from './Pages/DashBoard/AddProduct/AddProducts';
+import ManageProduct from './Pages/DashBoard/ManageProduct/ManageProduct';
 
 function App() {
   return (
@@ -62,6 +64,12 @@ function App() {
           </PrivateRoute>
           <PrivateRoute exact path="/makeadmin">
            <MakeAdmin/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/addproduct">
+           <AddProducts/>
+          </PrivateRoute>
+          <PrivateRoute exact path="/manageproduct">
+           <ManageProduct/>
           </PrivateRoute>
           <Route exact path="*">
             <NotFounds />

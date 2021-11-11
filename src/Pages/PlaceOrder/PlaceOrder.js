@@ -10,7 +10,7 @@ const PlaceOrder = (props) => {
    const [singleService, setSingleService] = useState({})
  const{user}=useAuth();
    useEffect(()=>{
-    fetch('http://localhost:5000/products')
+    fetch('https://mysterious-sierra-88051.herokuapp.com/products')
     .then(res=>res.json())
     .then(data=>setServiceDetails(data))
    },[])
@@ -24,7 +24,7 @@ const PlaceOrder = (props) => {
    const onSubmit = data => {
     const service = singleService;
     data.orders= service;
-       fetch('http://localhost:5000/orders',{
+       fetch('https://mysterious-sierra-88051.herokuapp.com/orders',{
         method: 'POST',
       headers: {
         'content-type': 'application/json'
