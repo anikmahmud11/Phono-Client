@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+
 
 
 
@@ -28,11 +28,17 @@ const ManageOrders = () => {
             })
 
     }
+    //handle pending
+    const handlePending = ()=>{
+        if(orders.email){
+
+        }
+    }
 
     return (
         <div>
-        <h2 className="text-success m-5 service-header text-center">Manage Orders</h2>
-        <h4 className="text-success m-5 service-header text-center">Totall-Order :{orders.length}</h4>
+        <h2 className="text-danger m-5 service-header text-center">All Orders</h2>
+        <h4 className="text-danger m-5 service-header text-center">Totall-Order :{orders.length}</h4>
         <div className=" services row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 m-0 container-fluid">
             {
                 orders.map(order => <div
@@ -51,9 +57,9 @@ const ManageOrders = () => {
                                     <p className="text-start">Email: {order.email}  </p>
                                     <p className="text-start">Shipping-Address:{order.address}   </p>
                                     <p className="text-start">phone: {order.phone}  </p>
-                                   <NavLink as={Link}to="/pay">
-                                   <Button className=" btn-success ">Delivered</Button>
-                                   </NavLink>
+                                   
+                                   <Button onClick={handlePending()} className=" btn-danger ">Pending</Button>
+                                   
                                     <br />
                                     <Button onClick={() => handleDeleteOrder(order._id)} className=" btn-success mt-1">Delete Order</Button>
                                 </div>

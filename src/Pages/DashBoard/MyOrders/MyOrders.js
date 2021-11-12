@@ -38,8 +38,8 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h2 className="text-success m-5 service-header text-center">Your Orders</h2>
-            <h4 className="text-success m-5 service-header text-center">Totall-Order :{orders.length}</h4>
+            <h2 className="text-danger m-5 service-header text-center">Your Orders</h2>
+            <h4 className="text-danger m-5 service-header text-center">Totall-Order :{orders.length}</h4>
             <div className=" services row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 m-0 container-fluid">
                 {
                     orders.map(order => <div
@@ -59,10 +59,10 @@ const MyOrders = () => {
                                         <p className="text-start">Shipping-Address:{order.address}   </p>
                                         <p className="text-start">phone: {order.phone}  </p>
                                        <NavLink as={Link}to="/pay">
-                                       <Button className=" btn-success ">Go to Payment</Button>
+                                       <Button className=" btn-danger ">Go to Payment</Button>
                                        </NavLink>
                                         <br />
-                                        <Button onClick={() => handleDeleteOrder(order._id)} className=" btn-success mt-1">Delete Booking</Button>
+                                        <Button onClick={() => handleDeleteOrder(order._id)} className=" btn-danger mt-1">Delete Booking</Button>
                                     </div>
                                 </div>
                             </div>

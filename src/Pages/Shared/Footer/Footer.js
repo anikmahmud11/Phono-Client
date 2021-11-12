@@ -10,13 +10,13 @@ const Footer = () => {
     const home = <FontAwesomeIcon icon={faHome} />
 
     return (
-        <div className="pt-5">
-            <div className="container border">
-                <div className="row">
-                    <div className="col">
-                        <div className="col">
+        <div className="pt-5  container-fluid">
+            <div className=" border">
+                <div className="row text-danger bg-danger bg-opacity-25 ">
+                    <div className="col ">
+                        <div className="col ">
                             <div>
-                                logo
+                                <img className="w-75 img-fluid  pt-2" src="https://i.ibb.co/9qDGzMf/Capture.png" alt="" />
                             </div>
                             <h5><span className="">{hotline}</span> Hotline</h5>
                             <ul>
@@ -39,65 +39,65 @@ const Footer = () => {
                            
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col pt-3 ">
                         <h5>Home</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Books</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Electronics</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Accessories</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Gift Card</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Books</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Electronics</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Accessories</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Gift Card</a></li>
                         </ul>
                         <h5>Shop by</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Books Category</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Electronics Category</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Boi Mela 2021</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Islamic Book</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Books Category</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Electronics Category</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Boi Mela 2021</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Islamic Book</a></li>
                         </ul>
                     </div>
-                    <div className="col">
+                    <div className="col pt-3">
                     <h5>Products</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Brands</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Authors</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Publishers</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">List</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Brands</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Authors</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Publishers</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">List</a></li>
                         </ul>
                         <h5>Support</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Order Track</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Contact Us</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Find My Product</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Guide</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Order Track</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Contact Us</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Find My Product</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Guide</a></li>
                         </ul>
                     </div>
-                    <div className="col">
+                    <div className="col pt-3">
                     <h5>Get to know us</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">About Us</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Site Map</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Publishers</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">List</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">About Us</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Site Map</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Publishers</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">List</a></li>
                         </ul>
                         <div>
                                 <h5>Stay Connected</h5>
-                                <a href="/#"><img className="w-25" src="https://i.ibb.co/30Qmdd7/downloadadfasfd.png" alt="" /></a>
-                                <a href="/#"> <img className="w-25" src="https://i.ibb.co/wSPsCXC/download-2.jpg" alt="" /></a>
-                                <a href="/#"> <img className="w-25" src="https://i.ibb.co/6mKrPB0/downdad.png" alt="" /></a>
+                                <a href="/#"><img className="w-25 rounded-circle" src="https://i.ibb.co/30Qmdd7/downloadadfasfd.png" alt="" /></a>
+                                <a href="/#"> <img className="w-25 rounded-circle" src="https://i.ibb.co/wSPsCXC/download-2.jpg" alt="" /></a>
+                                <a href="/#"> <img className="w-25 rounded-circle" src="https://i.ibb.co/6mKrPB0/downdad.png" alt="" /></a>
                             </div>
                     </div>
-                    <div className="col">
+                    <div className="col pt-3">
                     <h5>Policies</h5>
                         <ul >
-                            <li ><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Terms of Use</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Privacy Policy</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Happy Return</a></li>
-                            <li><a className="text-dark" style={{ textDecoration: 'none' }} href="/#">Refund Policy</a></li>
+                            <li ><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Terms of Use</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Privacy Policy</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Happy Return</a></li>
+                            <li><a className="text-danger" style={{ textDecoration: 'none' }} href="/#">Refund Policy</a></li>
                         </ul>
                     </div>
 
                 </div>
-                <div className="row border">
+                <div className="row border text-danger bg-danger bg-opacity-25 mt-2">
                 <h4>We accept payment via</h4>
                    <div className="row">
                     <div className="col">
@@ -125,11 +125,11 @@ const Footer = () => {
                    </div>
                    
                 </div>
-                <div className="row text-center mt-2">
+                <div className="row text-center mt-2 text-danger bg-danger bg-opacity-25">
                 
                  <p>Phono.com is now one of the leading e-commerce organizations in Bangladesh. It is indeed the biggest online mobile shop in Bangladesh that helps you save time and money. You can buy mobiles online with a few clicks or a convenient phone call. With breathtaking discounts and offers you can buy anything from . Superfast cash on delivery service brings the products at your doorstep. Our customer support, return and replacement policies will surely add extra confidence in your online shopping experience. Happy Shopping with Phono.com!</p>
                 </div>
-                <div className=" container text-center">
+                <div className=" container text-center text-danger">
                  © 2012-2021 Phono.com
                  </div>
             </div>

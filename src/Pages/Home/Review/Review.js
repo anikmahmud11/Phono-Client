@@ -18,10 +18,10 @@ const Review = () => {
                         key={userReview.name}
                     >
 
-                        <div className="card text-white bg-secondary m-2 mb-3" >
+                        <div className="card text-white bg-danger bg-opacity-50 m-2 mb-3 w-50 mx-auto" >
                             <div className="card-header">{userReview.email}</div>
                             <div className="card-body">
-                                <h5 className="card-title"><Rating
+                                <h5 className="card-title  text-warning"><Rating
                                     initialRating={userReview.rating}
                                     emptySymbol="far fa-star"
                                     fullSymbol="fas fa-star"

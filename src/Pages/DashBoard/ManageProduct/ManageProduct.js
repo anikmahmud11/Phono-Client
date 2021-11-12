@@ -36,7 +36,7 @@ const ManageProduct = () => {
     return (
         <>
         <div>
-            <h1 className=" p-3 service-header text-center">All Products</h1>
+            <h1 className=" p-3 service-header text-center text-danger">All Products</h1>
            
             <div className="  row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-0 container-fluid" >
                 {
@@ -55,7 +55,7 @@ const ManageProduct = () => {
                                     fullSymbol="fas fa-star"
                                     readonly></Rating></small></p>
                                     
-                                        <Button onClick={() => handleDeleteOrder(orders._id)}  className="bg-success w-50 container mb-2">{cartIcon} DELETE</Button>
+                                        <Button onClick={() => handleDeleteOrder(orders._id)}  className="btn-danger w-50 container mb-2">{cartIcon} DELETE</Button>
 
                                 </div>
 

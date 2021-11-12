@@ -30,7 +30,7 @@ const AddProducts = () => {
     }
     return (
         <div className="text-center">
-            <h1 className="m-2 mb-5 text-success">Add A Package</h1>
+            <h1 className="m-2 mb-5 text-danger">Add A Product</h1>
             <div className="place-order" >
                 <div className="mb-2 container add-service">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -38,7 +38,7 @@ const AddProducts = () => {
                         <input type="number" {...register("price")} placeholder="price" />
                         <input type="number" {...register("rating")} placeholder="rate between (1-5)" />
                         <input {...register("img")} placeholder="image url" />
-                        <input type="submit" />
+                        <input className="btn-danger" type="submit" />
                     </form>
                 </div>
 

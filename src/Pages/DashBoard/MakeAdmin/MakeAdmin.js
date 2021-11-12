@@ -38,15 +38,16 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h2>Make an Admin</h2>
-            <form onSubmit={handleAdminSubmit}>
+            <h2 className="text-center p-5 text-danger">Make an Admin</h2>
+            <form className="container w-auto mx-auto pb-5 ps-5 " onSubmit={handleAdminSubmit}>
                 <TextField
+                    error
                     sx={{ width: '50%' }}
                     label="Email"
                     type="email"
                     onBlur={handleOnBlur}
                     variant="standard" />
-                <Button type="submit" variant="contained">Make Admin</Button>
+                <Button color="error" type="submit" variant="contained">Make Admin</Button>
             </form>
             {success && <Alert severity="success">Made Admin successfully!</Alert>}
         </div>

@@ -13,7 +13,7 @@ const Navigation = () => {
   const { user, logout, admin } = useAuth();
   console.log(user);
   return (
-    <Navbar bg="primary bg-opacity-75" expand={false} sticky="top">
+    <Navbar bg="danger bg-opacity-75" expand={false} sticky="top">
       <Container fluid>
         <Navbar.Brand as={Link} to="/home"><img className="w-75 img-fluid" src="https://i.ibb.co/9qDGzMf/Capture.png" alt="" /></Navbar.Brand>
         
@@ -36,7 +36,7 @@ const Navigation = () => {
        
        {
          user?.email ?
-         <Navbar.Toggle aria-controls="offcanvasNavbar" />
+         <Navbar.Toggle className="bg-warning" aria-controls="offcanvasNavbar" />
          :<> </>
        }
       
@@ -45,19 +45,19 @@ const Navigation = () => {
           aria-labelledby="offcanvasNavbarLabel"
           placement="start"
         >
-          <Offcanvas.Header closeButton className="">
+          <Offcanvas.Header closeButton className="bg-danger bg-opacity-50 text-light">
             <Offcanvas.Title id="offcanvasNavbarLabel">DashBoard</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
+          <Offcanvas.Body  className="bg-danger bg-opacity-25 ">
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="text-dark" as={Link} to="/pay">Pay</Nav.Link>
-              <Nav.Link className="text-dark" as={Link} to="/myorders">My Orders</Nav.Link>
-              <Nav.Link className="text-dark" as={Link} to="/review">Review</Nav.Link>
-             {admin &&  <NavDropdown title="Admin" id="offcanvasNavbarDropdown">
-                <NavDropdown.Item as={Link} to="/manageorders">Manage All Orders</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/manageproduct">Manage Products</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/addproduct">Add Product</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/makeadmin">Make Admin</NavDropdown.Item>
+              <Nav.Link className="text-danger fw-bold" as={Link} to="/pay">Pay</Nav.Link>
+              <Nav.Link className="text-danger fw-bold" as={Link} to="/myorders">My Orders</Nav.Link>
+              <Nav.Link className="text-danger fw-bold" as={Link} to="/review">Review</Nav.Link>
+             {admin &&  <NavDropdown className="fw-bolder" title="Admin" id="offcanvasNavbarDropdown">
+                <NavDropdown.Item className="text-danger  fw-bold"   as={Link} to="/manageorders">Manage All Orders</NavDropdown.Item>
+                <NavDropdown.Item className="text-danger fw-bold" as={Link} to="/manageproduct">Manage Products</NavDropdown.Item>
+                <NavDropdown.Item className="text-danger fw-bold" as={Link} to="/addproduct">Add Product</NavDropdown.Item>
+                <NavDropdown.Item className="text-danger fw-bold" as={Link} to="/makeadmin">Make Admin</NavDropdown.Item>
                 
               </NavDropdown>}
             </Nav>

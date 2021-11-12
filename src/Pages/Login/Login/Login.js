@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button, CircularProgress, Container,  TextField, Typography} from '@mui/material'
+import {Button, Container,  LinearProgress,  TextField, Typography} from '@mui/material'
 import { Alert, NavLink } from 'react-bootstrap';
 import { Link , useLocation,useHistory} from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -28,11 +28,14 @@ const Login = () => {
     }
     return (
        
-            <Container className="border w-75">
+            <Container className="border border-danger w-50 mt-3">
                 
-                    <Typography className="text-center" variant="body1" gutterBottom>Login</Typography>
+                {isLoading && <LinearProgress color="secondary"/>}
+                
+                    <Typography className="text-center text-danger fw-bolder" variant="h4" gutterBottom>Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
                         <TextField
+                            error
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label="Your Email"
@@ -41,6 +44,7 @@ const Login = () => {
                             onChange={handleOnChange}
                             variant="standard" />
                         <TextField
+                            error
                             sx={{ width: '75%', m: 1 }}
                             id="standard-basic"
                             label="Your Password"
@@ -49,14 +53,14 @@ const Login = () => {
                             onChange={handleOnChange}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                        <Button color="error" sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             as={Link} to="/register">
-                            <Button variant="text">New User? Please Register</Button>
+                            <Button color="error" variant="text">New User? Please Register</Button>
                         </NavLink>
-                        {isLoading && <CircularProgress/>}
-    {user?.email && <Alert severity="success">User login successfully!</Alert>}
+                       
+    {user?.email && <Alert  severity="success">User login successfully!</Alert>}
     {authError && <Alert severity="error">{authError}</Alert>}
                     </form>
                 

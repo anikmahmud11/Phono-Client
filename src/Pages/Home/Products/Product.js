@@ -22,19 +22,22 @@ const Product = () => {
                     products.slice(4, 10).map(product => <div
                         key={product.id}
                     >
-                        <div className="card-group border rounded " style={{ height: "25rem" }} >
-                            <div className="card text-center bg-success bg-opacity-25 " >
-                                <img style={{ height: "13rem", width: "13rem" }} src={product.img} className="card-img-top  rounded mx-auto pt-2" alt="..." />
-                                <div className="card-body">
+                        <div className="card-group  " style={{ height: "25rem" }} >
+                            <div style={{borderRadius:"20px"}} className="card text-center bg-danger bg-opacity-50 text-light fw-bold " >
+                                <img 
+                                style={{ height: "13rem", width: "13rem",borderRadius:"20px" }} 
+                                src={product.img} 
+                                className="card-img-top img-fluid  mx-auto pt-2" alt="..." />
+                                <div className="card-body ">
                                     <h5 className="card-title">{product.name}</h5>
                                     <p className="card-text">${product.price}</p>
-                                    <p className="card-text"><small className="text-muted"><Rating
+                                    <p className="card-text"><small className="text-danger "><Rating
                                         initialRating={product.rating}
                                         emptySymbol="far fa-star"
                                         fullSymbol="fas fa-star"
                                         readonly></Rating></small></p>
                                     <Link to={`/placeorder/${product?.id}`}>
-                                        <Button className="bg-danger w-50 container mb-2">{cartIcon} Buy Now</Button>
+                                        <Button className="btn-danger w-50 container mb-2 ">{cartIcon} Buy Now</Button>
 
                                     </Link>
                                 </div>

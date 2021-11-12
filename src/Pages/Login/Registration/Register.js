@@ -1,4 +1,4 @@
-import { TextField, Typography,Button, CircularProgress, Alert } from '@mui/material';
+import { TextField, Typography,Button,  Alert, LinearProgress } from '@mui/material';
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
@@ -31,53 +31,57 @@ const Register = () => {
         
     }
     return (
-        <Container className="border w-75">
-                
-        <Typography className="text-center" variant="body1" gutterBottom>Registration</Typography>
+        <Container className="border rounded border-danger w-50 mt-3">
+                {isLoading && <LinearProgress color="secondary"/>}
+        <Typography className="text-center text-danger fw-bolder pt-1" variant="h4" gutterBottom>Registration</Typography>
         {
          !isLoading &&<form onSubmit={handleLoginSubmit}>
             <TextField
+                error
                 sx={{ width: '75%', m: 1 }}
                 id="standard-basic"
-                label="Your Name"
+                label=" Name"
                 name="name"
                 onChange={handleOnChange}
                 variant="standard" />
             <TextField
+                error
                 sx={{ width: '75%', m: 1 }}
                 id="standard-basic"
-                label="Your Email"
+                label=" Email"
                 name="email"
                 type="email"
                 onChange={handleOnChange}
                 variant="standard" />
             
             <TextField
+                error
                 sx={{ width: '75%', m: 1 }}
                 id="standard-basic"
-                label="Your Password"
+                label=" Password"
                 type="password"
                 name="password"
                 onChange={handleOnChange}
                 variant="standard" />
             <TextField
+                error
                 sx={{ width: '75%', m: 1 }}
                 id="standard-basic"
-                label="Confirm Your Password"
+                label="Confirm  Password"
                 type="password"
                 name="passwordMatch"
                 onChange={handleOnChange}
                 variant="standard" />
 
-            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+            <Button color="error" sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
             <NavLink
                 style={{ textDecoration: 'none' }}
                 as={Link} to="/login">
-                <Button variant="text">Already registered? Please login</Button>
+                <Button color="error" variant="text">Already registered? Please login</Button>
             </NavLink>
         </form>
         }
-    {isLoading && <CircularProgress/>}
+    
     {user?.email && <Alert severity="success">User Created successfully!</Alert>}
     {authError && <Alert severity="error">{authError}</Alert>}
 </Container>

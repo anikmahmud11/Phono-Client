@@ -43,7 +43,7 @@ console.log(result);
    }
     return (
         <div className="text-center">
-      <h1 className="m-2 mb-5 text-success">Give your Feedback</h1>
+      <h1 className="m-2 mb-5 text-danger">Give your Feedback</h1>
       <div className="place-order" >
         <div className="mb-2 container">
           <form className="placeOrder-form container  m-0  border-success rounded  " onSubmit={handleSubmit(onSubmit)}>
@@ -54,7 +54,7 @@ console.log(result);
         <input className="container-fluid" placeholder="Description" defaultValue="" {...register("description")} required/>
        
 
-        <input className="container-fluid bg-success text-white mb-2" type="submit" />
+        <input className="container-fluid btn-danger text-white mb-2" type="submit" />
     </form>
         </div>
 

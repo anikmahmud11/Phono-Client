@@ -1,0 +1,86 @@
+[debug] [2021-11-12T12:18:34.629Z] ----------------------------------------------------------------------
+[debug] [2021-11-12T12:18:34.633Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Anik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-12T12:18:34.633Z] CLI Version:   9.21.0
+[debug] [2021-11-12T12:18:34.633Z] Platform:      win32
+[debug] [2021-11-12T12:18:34.633Z] Node Version:  v14.17.1
+[debug] [2021-11-12T12:18:34.634Z] Time:          Fri Nov 12 2021 18:18:34 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-11-12T12:18:34.634Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-12T12:18:34.738Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-12T12:18:34.738Z] > authorizing via signed-in user (mzmahmudanik@gmail.com)
+[debug] [2021-11-12T12:18:34.738Z] [iam] checking project phono-e7ef4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-12T12:18:34.741Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-12T12:18:34.741Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-12T12:18:35.072Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Fri, 12 Nov 2021 12:18:35 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:35.138Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/phono-e7ef4:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-11-12T12:18:37.443Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 12 Nov 2021 12:18:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=970","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:37.444Z] > refreshing access token with scopes: []
+[debug] [2021-11-12T12:18:37.445Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-12T12:18:37.668Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 12 Nov 2021 12:18:37 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:37.768Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/phono-e7ef4 [none]
+[debug] [2021-11-12T12:18:38.297Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/phono-e7ef4 200
+[debug] [2021-11-12T12:18:38.297Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/phono-e7ef4 {"projectId":"phono-e7ef4","projectNumber":"54015399665","displayName":"phono","name":"projects/phono-e7ef4","resources":{"hostingSite":"phono-e7ef4"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'phono-e7ef4'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-11-12T12:18:38.304Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-12T12:18:38.304Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-12T12:18:38.521Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Fri, 12 Nov 2021 12:18:38 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:38.583Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-11-12T12:18:41.810Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 12 Nov 2021 12:18:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[phono-e7ef4]: beginning deploy... 
+[info] i  hosting[phono-e7ef4]: found 1 files in build 
+[debug] [2021-11-12T12:18:41.820Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2021-11-12T12:18:41.836Z] > refreshing access token with scopes: []
+[debug] [2021-11-12T12:18:41.836Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-12T12:18:41.838Z] [hosting] hash cache [YnVpbGQ] stored for 1 files
+[debug] [2021-11-12T12:18:41.838Z] [hosting][hash queue][FINAL] {"max":15,"min":15,"avg":15,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":18}
+[debug] [2021-11-12T12:18:42.079Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 12 Nov 2021 12:18:42 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:42.138Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions/cf0cb655483cc955:populateFiles [none]
+[debug] [2021-11-12T12:18:42.139Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions/cf0cb655483cc955:populateFiles {"files":{"/index.html":"882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933"}}
+[debug] [2021-11-12T12:18:43.586Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions/cf0cb655483cc955:populateFiles 200
+[debug] [2021-11-12T12:18:43.586Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions/cf0cb655483cc955:populateFiles {"uploadRequiredHashes":["882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/phono-e7ef4/versions/cf0cb655483cc955/files"}
+[debug] [2021-11-12T12:18:43.588Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/phono-e7ef4/versions/cf0cb655483cc955/files/882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933 [none]
+[debug] [2021-11-12T12:18:43.588Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/phono-e7ef4/versions/cf0cb655483cc955/files/882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933 [stream]
+[debug] [2021-11-12T12:18:43.590Z] [hosting][populate queue][FINAL] {"max":1752,"min":1752,"avg":1752,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1754}
+[debug] [2021-11-12T12:18:43.590Z] [hosting] uploads queued: 1
+[debug] [2021-11-12T12:18:46.344Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/phono-e7ef4/versions/cf0cb655483cc955/files/882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933 200
+[debug] [2021-11-12T12:18:46.344Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/phono-e7ef4/versions/cf0cb655483cc955/files/882cb52af5a705e4c512f9c34b629aff564327208cde5e0915e6ee54aea77933 [stream]
+[debug] [2021-11-12T12:18:46.344Z] [hosting][upload queue][FINAL] {"max":2757,"min":2757,"avg":2757,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2757}
+[info] +  hosting[phono-e7ef4]: file upload complete 
+[debug] [2021-11-12T12:18:46.345Z] [hosting] deploy completed after 4533ms
+[debug] [2021-11-12T12:18:46.349Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "phono-e7ef4"
+    },
+    "site": "phono-e7ef4",
+    "version": "sites/phono-e7ef4/versions/cf0cb655483cc955"
+  }
+]
+[info] i  hosting[phono-e7ef4]: finalizing version... 
+[debug] [2021-11-12T12:18:46.350Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-12T12:18:46.351Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-12T12:18:46.576Z] <<< HTTP RESPONSE 200 {"date":"Fri, 12 Nov 2021 12:18:46 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"clear","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-12T12:18:46.660Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/phono-e7ef4/versions/cf0cb655483cc955?updateMask=status  
+ {"status":"FINALIZED"}
