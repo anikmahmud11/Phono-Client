@@ -15,10 +15,11 @@ const useFirebase=()=>{
 
     const auth = getAuth();
 
-    const registerUser = (email ,password ,name ,history)=>{
+    const registerUser = (email ,password ,name ,history )=>{
         setIsLoading(true);
         createUserWithEmailAndPassword(auth,email,password)
         .then((userCredential) => {
+            
             setAuthError('');
             const newUser = {email, displayName:name};
             setUser(newUser);
@@ -27,10 +28,12 @@ const useFirebase=()=>{
             //send name to database
             updateProfile(auth.currentUser,{
                 displayName:name
-            }).then(()=>{               
+            }).then(()=>{ 
+                             
             }).catch((error)=>{
+
             });
-            history.replace('/')
+            history?.replace('/home')
         })
         
         .catch((error) => {
