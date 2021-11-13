@@ -30,7 +30,7 @@ const AddProducts = () => {
     }
     return (
         <div className="text-center">
-            <h1 className="m-2 mb-5 text-danger">Add A Product</h1>
+            <h1 className="m-2 mb-5 text-danger">Add A Packet</h1>
             <div className="place-order" >
                 <div className="mb-2 container add-service">
                     <form onSubmit={handleSubmit(onSubmit)}>

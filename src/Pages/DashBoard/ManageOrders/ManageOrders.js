@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 
 
 const ManageOrders = () => {
+    
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         fetch('https://mysterious-sierra-88051.herokuapp.com/orders')
@@ -28,12 +29,8 @@ const ManageOrders = () => {
             })
 
     }
-    //handle pending
-    const handlePending = ()=>{
-        if(orders.email){
 
-        }
-    }
+    
 
     return (
         <div>
@@ -58,7 +55,7 @@ const ManageOrders = () => {
                                     <p className="text-start">Shipping-Address:{order.address}   </p>
                                     <p className="text-start">phone: {order.phone}  </p>
                                    
-                                   <Button onClick={handlePending()} className=" btn-danger ">Pending</Button>
+                                 
                                    
                                     <br />
                                     <Button onClick={() => handleDeleteOrder(order._id)} className=" btn-success mt-1">Delete Order</Button>

@@ -8,7 +8,6 @@ const ManageProduct = () => {
     const cartIcon = <FontAwesomeIcon icon={faTrash} />
 
     const [products, setProducts] = useState([]);
-    const [orders, setOrders] = useState([]);
 
     useEffect(() => {
         fetch('https://mysterious-sierra-88051.herokuapp.com/products')
@@ -19,6 +18,7 @@ const ManageProduct = () => {
    // delete 
    const handleDeleteOrder = id => {
     fetch(`https://mysterious-sierra-88051.herokuapp.com/products/${id}`, {
+        
         method: 'DELETE'
     })
         .then(res => res.json())
@@ -26,8 +26,9 @@ const ManageProduct = () => {
             console.log(data);
             if (data.deletedCount > 0) {
                 alert('deleted successfully')
-                const remainingOrders = orders.filter(order => order._id !== id);
-                setOrders(remainingOrders)
+                const remainingProduct = products.filter(product => product._id !== id);
+                console.log(remainingProduct);
+                setProducts(remainingProduct)
             }
         })
 
@@ -55,7 +56,7 @@ const ManageProduct = () => {
                                     fullSymbol="fas fa-star"
                                     readonly></Rating></small></p>
                                     
-                                        <Button onClick={() => handleDeleteOrder(orders._id)}  className="btn-danger w-50 container mb-2">{cartIcon} DELETE</Button>
+                                        <Button onClick={() => handleDeleteOrder(product._id)}  className="btn-danger w-50 container mb-2">{cartIcon} DELETE</Button>
 
                                 </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Form, FormControl, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { Button, Container,  Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -73,6 +73,7 @@ const Navigation = () => {
         
       </Container>
     </Navbar>
+    
   );
 };
 
