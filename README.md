@@ -6,7 +6,7 @@ Live Link
 Link : https://phono-e7ef4.web.app
 
 About Project
-1.This project is a single page web application which is a online  mobile phone purses system. 
+1.This project is a single page web application which is a online  mobile phone purchase system. 
 2.This project is developed using mongodb,nodejs, express, react-router-dom, react-spring, react-rating, react-Bootstrap, css, fortawesome etc. 
 3.This web site has navbar, packages , team , my orders, 404 error page , a footer,admin panel, user panel . 
 4.For busying any product, user have to login first. 
